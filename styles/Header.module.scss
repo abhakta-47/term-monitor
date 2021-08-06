@@ -1,0 +1,91 @@
+$primary: #3f0e40;
+$back-ground: #e5e5e5;
+
+.header {
+  height: 5.75rem;
+  display: flex;
+  background-color: $primary;
+  align-items: center;
+
+  .brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 15rem;
+
+    background-color: white;
+    // .brand-logo {
+    //   height: 25.53px;
+    //   width: 25.53px;
+    // }
+    .brandName {
+      font-size: 1.6rem;
+      font-weight: 400;
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .headerContent {
+    margin: 0 3rem;
+    flex-grow: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    .keyWords {
+      color: white;
+      font-size: 1.875rem;
+      line-height: 175%;
+      letter-spacing: 0.15px;
+      flex-grow: 1;
+    }
+
+    .searchBar {
+      height: 2.3rem;
+      border-radius: 8px;
+      background-color: white;
+      color: $primary;
+
+      margin-right: 1.2rem;
+
+      input {
+        border: 0;
+      }
+
+      button {
+        height: 100%;
+        border: 0;
+        padding: 0 0 0 1rem;
+        border-radius: 0 8px 8px 0;
+        display: flex;
+        align-items: center;
+
+        background-color: white;
+        color: $primary;
+        font-size: 0.75rem;
+
+        svg {
+          margin: 0 0.5rem;
+        }
+
+        &:hover {
+          background-color: #3f0e40;
+          color: white;
+        }
+      }
+    }
+
+    .account {
+      height: 2.3rem;
+      width: 2.3rem;
+      border-radius: 50%;
+      background-color: white;
+      color: $primary;
+    }
+  }
+}
