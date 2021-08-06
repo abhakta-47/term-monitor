@@ -16,7 +16,7 @@ export default function Home() {
           content="Web site created using create-react-app"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="/globals.css" />
+        {/* <link rel="stylesheet" href="/globals.css" /> */}
       </Head>
       <Header />
       <div className="flex flex-grow">
@@ -26,8 +26,8 @@ export default function Home() {
             compClassName="filter"
             mainHeader={[
               "Add another keyword",
-              <span>1/3</span>,
-              <span>UPGRADE</span>,
+              <span key="1">1/3</span>,
+              <span key="2">UPGRADE</span>,
             ]}
             subHeader="advanced search"
           >

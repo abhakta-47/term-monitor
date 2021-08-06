@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import logo from "../public/logo.svg";
 import styles from "./../styles/Header.module.css";
 import { BsArrowRight } from "react-icons/bs";
 
@@ -7,7 +9,11 @@ function Header() {
     <div className={styles.header}>
       <div className={styles.brand}>
         <div className={styles.brandLogo}>
-          <img src="/logo.svg" alt="logo" />
+          <Image
+            src={logo}
+            alt="logo"
+            //  width={200} height={200}
+          />
         </div>
         <div className={styles.brandName}>
           Term<span>Monitor</span>
