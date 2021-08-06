@@ -1,0 +1,43 @@
+.content {
+  width: 100%;
+  margin: 2rem 0 3rem 0;
+}
+
+.content .contentHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0.5rem;
+  line-height: 175%;
+}
+
+.content .contentHeader .mainHeader {
+  font-size: 1.2rem;
+}
+
+.content .contentHeader .mainHeader span:nth-child(1) {
+  margin: 0 1rem;
+  padding: 0.2rem 1rem;
+  background-color: #3f0e40;
+  color: white;
+  font-size: 1rem;
+}
+
+.content .contentHeader .mainHeader span:nth-child(2) {
+  font-size: 1rem;
+}
+
+.content .contentHeader .subHeader {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.content .mainContent {
+  background-color: white;
+  padding: 1.2rem 1.4rem;
+  font-size: 14px;
+}
+/*# sourceMappingURL=Content.module.css.map */

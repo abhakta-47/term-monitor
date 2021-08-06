@@ -1,0 +1,42 @@
+.contentHeader span:nth-child(1) {
+  margin: 0 1rem;
+  padding: 0.2rem 1rem;
+  background-color: #3f0e40;
+  color: white;
+  font-size: 1rem;
+}
+
+.contentHeader span:nth-child(2) {
+  font-size: 1rem;
+}
+
+.mainContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  padding: 1.2rem 1.4rem;
+  font-size: 14px;
+}
+
+.mainContent .searchIcon {
+  margin-right: 2rem;
+}
+
+.mainContent input {
+  border: none;
+}
+
+.mainContent button {
+  margin-left: auto;
+  padding: 0.8rem 1.8rem;
+  color: white;
+  font-size: 1.2rem;
+  background-color: #3f0e40;
+  border-radius: 8px;
+  border: none;
+}
+/*# sourceMappingURL=Filter.module.css.map */

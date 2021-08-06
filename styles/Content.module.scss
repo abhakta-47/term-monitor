@@ -1,0 +1,40 @@
+$primary: #3f0e40;
+$back-ground: #e5e5e5;
+$black: rgba(0, 0, 0, 1);
+$black2: rgba(0, 0, 0, 0.54);
+$white: rgba(255, 255, 255, 1);
+
+.content {
+  width: 100%;
+  margin: 2rem 0 3rem 0;
+  .contentHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    line-height: 175%;
+
+    .mainHeader {
+      font-size: 1.2rem;
+      span:nth-child(1) {
+        margin: 0 1rem;
+        padding: 0.2rem 1rem;
+        background-color: $primary;
+        color: $white;
+        font-size: 1rem;
+      }
+      span:nth-child(2) {
+        font-size: 1rem;
+      }
+    }
+    .subHeader {
+      font-weight: 400;
+      font-size: 0.9rem;
+    }
+  }
+
+  .mainContent {
+    background-color: $white;
+    padding: 1.2rem 1.4rem;
+    font-size: 14px;
+  }
+}
