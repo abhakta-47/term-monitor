@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import Content from "../components/Content";
 import Filter from "../components/Filter";
+import TrackingTable from "../components/TrackingTable";
 
 export default function Home() {
   return (
@@ -31,6 +32,14 @@ export default function Home() {
             subHeader="advanced search"
           >
             <Filter />
+          </Content>
+
+          <Content
+            compClassName="tracking-table"
+            mainHeader="The terms you are tracking"
+            subHeader="The data will refresh every 5 min"
+          >
+            <TrackingTable />
           </Content>
         </div>
       </div>
