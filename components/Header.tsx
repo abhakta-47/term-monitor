@@ -1,33 +1,32 @@
 import React from "react";
 import Image from "next/image";
 import logo from "../public/logo.svg";
-import styles from "./../styles/Header.module.css";
 import { BsArrowRight } from "react-icons/bs";
 
 function Header() {
   return (
-    <div className={styles.header}>
-      <div className={styles.brand}>
-        <div className={styles.brandLogo}>
+    <div className="h-24 flex bg-primary items-center">
+      <div className="flex items-center h-full w-60 bg-white">
+        <div>
           <Image
             src={logo}
             alt="logo"
             //  width={200} height={200}
           />
         </div>
-        <div className={styles.brandName}>
-          Term<span>Monitor</span>
+        <div className="text-2xl font-normal">
+          Term<span className="font-semibold">Monitor</span>
         </div>
       </div>
-      <div className={styles.headerContent}>
-        <div className={styles.keyWords}>KEYWORDS</div>
-        <div className={`${styles.searchBar} flex items-center`}>
+      <div className="mx-12 flex-grow flex items-center">
+        <div className="text-white text-3xl flex-grow">KEYWORDS</div>
+        <div className="h-10 rounded-lg bg-white text-primary mr-5 flex items-center">
           <input type="text" name="submit1" id="submit1" />
-          <button>
+          <button className="h-100 pl-4 rounded-r-2 flex items-center bg-white text-primary text-xs hover:text-white hover:bg-primary">
             SUBMIT <BsArrowRight fontFamily="bold" fontSize="1rem" />
           </button>
         </div>
-        <div className={`${styles.account} flex items-center justify-center`}>
+        <div className="h-8 w-8 rounded-full bg-white text-primary flex items-center justify-center">
           A
         </div>
       </div>

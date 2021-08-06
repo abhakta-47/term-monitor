@@ -1,5 +1,4 @@
 import React, { ReactElement } from "react";
-import styles from "../styles/Content.module.css";
 
 interface ContentProp {
   mainHeader: string | (string | ReactElement)[];
@@ -15,12 +14,12 @@ function Content({
   compClassName,
 }: ContentProp) {
   return (
-    <div className={`${compClassName} ${styles.content}`}>
-      <div className={styles.contentHeader}>
-        <div className={styles.mainHeader}>{mainHeader}</div>
-        {subHeader ? <div className={styles.subHeader}>{subHeader}</div> : ""}
+    <div className={`${compClassName} w-full mt-8 mb-12`}>
+      <div className="flex justify-between mb-2">
+        <div className="text-lg">{mainHeader}</div>
+        {subHeader ? <div className="text-sm">{subHeader}</div> : ""}
       </div>
-      <div className={styles.mainContent}>{children}</div>
+      <div className="bg-white px-5 py-5">{children}</div>
     </div>
   );
 }

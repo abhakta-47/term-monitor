@@ -19,15 +19,19 @@ export default function Home() {
         {/* <link rel="stylesheet" href="/globals.css" /> */}
       </Head>
       <Header />
-      <div className="flex flex-grow">
+      <div className="flex flex-grow bg-backGround">
         <Sidebar />
         <div className="p-12 col flex-grow">
           <Content
             compClassName="filter"
             mainHeader={[
               "Add another keyword",
-              <span key="1">1/3</span>,
-              <span key="2">UPGRADE</span>,
+              <span key="1" className="mx-4 px-4 py-1 bg-primary text-white">
+                1/3
+              </span>,
+              <span key="2" className="text-base">
+                UPGRADE
+              </span>,
             ]}
             subHeader="advanced search"
           >
