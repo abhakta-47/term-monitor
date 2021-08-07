@@ -9,7 +9,7 @@ import {
 interface SideBarDataItem {
   title: string;
   path: string;
-  icon: JSX.Element;
+  icon?: JSX.Element;
   cName?: string;
   subMenu?: SideBarDataItem[];
 }
@@ -28,7 +28,7 @@ export const SidebarData: SideBarDataItem[] = [
     cName: "nav-text",
   },
   {
-    title: "Manage Resources",
+    title: "Manage sources",
     path: "/manage",
     icon: <AiOutlineCreditCard />,
     cName: "nav-text",
@@ -54,7 +54,6 @@ export const SidebarData: SideBarDataItem[] = [
       {
         title: "Billing",
         path: "/billing",
-        icon: <AiOutlineCreditCard />,
         cName: "nav-text",
       },
     ],

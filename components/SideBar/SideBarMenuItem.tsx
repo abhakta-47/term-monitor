@@ -38,7 +38,7 @@ function SideBarMenuItem({ index, item, path }: SideBarMenuItemProp) {
           className={`${
             router.pathname === item.path
               ? "text-white bg-primary text-white"
-              : "text-blackLighter hover:text-black"
+              : "text-gray-800 hover:text-black"
           } ${SideBarMenuItemStyleBase} `}
           onClick={handleClick}
         >
@@ -76,11 +76,11 @@ function SideBarMenuItem({ index, item, path }: SideBarMenuItemProp) {
           className={`${
             router.pathname === item.path
               ? "text-white bg-primary text-white"
-              : "text-blackLighter hover:text-black"
+              : "text-gray-600 hover:text-black"
           } ${SideBarMenuItemStyleBase} `}
           onClick={handleClick}
         >
-          <div className="mr-4">{item.icon}</div>
+          {item.icon ? <div className="mr-4">{item.icon}</div> : ""}
           <span>{item.title}</span>
           {/* <span>{path}</span> */}
           {item.subMenu ? (
@@ -91,7 +91,7 @@ function SideBarMenuItem({ index, item, path }: SideBarMenuItemProp) {
             ""
           )}
         </div>
-        <div className={`${isOpen ? "" : "hidden"}  ml-2`}>
+        <div className={`${isOpen ? "" : "hidden"} ml-4`}>
           {item.subMenu ? (
             <SideBarMenu sideMenuItems={item.subMenu} path={path} />
           ) : (

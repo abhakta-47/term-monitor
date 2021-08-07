@@ -6,8 +6,11 @@ import { BsArrowRight } from "react-icons/bs";
 
 function Header() {
   return (
-    <div className="h-20 flex bg-primary items-center">
-      <Link href="#">
+    <div
+      style={{ minHeight: "5rem" }}
+      className="h-20 flex bg-primary items-center"
+    >
+      <Link href="#" passHref>
         <div className="flex cursor-pointer items-center justify-center h-full w-60 bg-white">
           <div className="mr-1 flex items-center">
             <Image
