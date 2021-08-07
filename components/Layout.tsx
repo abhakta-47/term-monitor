@@ -1,7 +1,7 @@
 import React, { Children, ReactChild } from "react";
 import Head from "next/head";
 import Header from "./Header";
-import Sidebar from "./Sidebar";
+import Sidebar from "./SideBar/Sidebar";
 
 interface LyoutProps {
   children: ReactChild[] | ReactChild;

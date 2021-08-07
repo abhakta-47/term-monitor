@@ -1,15 +1,20 @@
 import React from "react";
 import { IoMdPeople } from "react-icons/io";
-import { AiFillHome, AiOutlineCreditCard } from "react-icons/ai";
+import {
+  AiFillHome,
+  AiOutlineCreditCard,
+  AiTwotoneSetting,
+} from "react-icons/ai";
 
-interface SidebarDataOne {
+interface SideBarDataItem {
   title: string;
   path: string;
   icon: JSX.Element;
-  cName: string;
+  cName?: string;
+  subMenu?: SideBarDataItem[];
 }
 
-export const SidebarData: SidebarDataOne[] = [
+export const SidebarData: SideBarDataItem[] = [
   {
     title: "Add keywords",
     path: "/",
@@ -39,5 +44,19 @@ export const SidebarData: SidebarDataOne[] = [
     path: "/alerts",
     icon: <AiOutlineCreditCard />,
     cName: "nav-text",
+  },
+  {
+    title: "Settings",
+    path: "/settings",
+    icon: <AiTwotoneSetting />,
+    cName: "nav-text",
+    subMenu: [
+      {
+        title: "Billing",
+        path: "/billing",
+        icon: <AiOutlineCreditCard />,
+        cName: "nav-text",
+      },
+    ],
   },
 ];

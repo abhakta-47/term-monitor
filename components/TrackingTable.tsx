@@ -58,11 +58,13 @@ function TrackingTable() {
     >
       <table className="w-full">
         <thead>
-          <td className="py-4 px-5">Keywords</td>
-          <td className="py-4 px-5">Goal</td>
-          <td className="py-4 px-5">Matches</td>
-          <td className="py-4 px-5">Search Status</td>
-          <td className="py-4 px-5">Delete keyword</td>
+          <tr>
+            <td className="py-4 px-5">Keywords</td>
+            <td className="py-4 px-5">Goal</td>
+            <td className="py-4 px-5">Matches</td>
+            <td className="py-4 px-5">Search Status</td>
+            <td className="py-4 px-5">Delete keyword</td>
+          </tr>
         </thead>
         <tbody>
           {getData().map((item) => (
