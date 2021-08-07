@@ -15,10 +15,10 @@ function Sidebar() {
                   className={
                     index === 0
                       ? "text-white bg-primary text-white"
-                      : "text-black2"
+                      : "text-black2 hover:text-black"
                   }
                 >
-                  <a href="#" className="flex p-4 hover:text-black">
+                  <a href="#" className="flex p-4">
                     <div className="mr-4">{item.icon}</div>
                     <span>{item.title}</span>
                   </a>

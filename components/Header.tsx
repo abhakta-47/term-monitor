@@ -1,23 +1,26 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../public/logo.svg";
 import { BsArrowRight } from "react-icons/bs";
 
 function Header() {
   return (
     <div className="h-24 flex bg-primary items-center">
-      <div className="flex items-center h-full w-60 bg-white">
-        <div>
-          <Image
-            src={logo}
-            alt="logo"
-            //  width={200} height={200}
-          />
+      <Link href="#">
+        <div className="flex cursor-pointer items-center h-full w-60 bg-white">
+          <div>
+            <Image
+              src={logo}
+              alt="logo"
+              //  width={200} height={200}
+            />
+          </div>
+          <div className="text-2xl font-normal">
+            Term<span className="font-semibold">Monitor</span>
+          </div>
         </div>
-        <div className="text-2xl font-normal">
-          Term<span className="font-semibold">Monitor</span>
-        </div>
-      </div>
+      </Link>
       <div className="mx-12 flex-grow flex items-center">
         <div className="text-white text-3xl flex-grow">KEYWORDS</div>
         <div className="h-10 rounded-lg bg-white text-primary mr-5 flex items-center">

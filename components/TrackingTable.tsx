@@ -1,5 +1,6 @@
 import React from "react";
 
+import Content from "./Content";
 import styles from "../styles/TrackingTable.module.css";
 
 let getData = () => [
@@ -50,26 +51,32 @@ let getData = () => [
 function TrackingTable() {
   // let []
   return (
-    <table className="w-full">
-      <thead>
-        <td className="py-4 px-5">Keywords</td>
-        <td className="py-4 px-5">Goal</td>
-        <td className="py-4 px-5">Matches</td>
-        <td className="py-4 px-5">Search Status</td>
-        <td className="py-4 px-5">Delete keyword</td>
-      </thead>
-      <tbody>
-        {getData().map((item) => (
-          <tr key={item.id}>
-            <td className="py-4 px-5">{item.keyword}</td>
-            <td className="py-4 px-5">{item.goal}</td>
-            <td className="py-4 px-5">{item.matches}</td>
-            <td className="py-4 px-5">{item.search_status} Status</td>
-            <td className="py-4 px-5">Delete keyword</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <Content
+      compClassName="tracking-table"
+      mainHeader="The terms you are tracking"
+      subHeader="The data will refresh every 5 min"
+    >
+      <table className="w-full">
+        <thead>
+          <td className="py-4 px-5">Keywords</td>
+          <td className="py-4 px-5">Goal</td>
+          <td className="py-4 px-5">Matches</td>
+          <td className="py-4 px-5">Search Status</td>
+          <td className="py-4 px-5">Delete keyword</td>
+        </thead>
+        <tbody>
+          {getData().map((item) => (
+            <tr key={item.id}>
+              <td className="py-4 px-5">{item.keyword}</td>
+              <td className="py-4 px-5">{item.goal}</td>
+              <td className="py-4 px-5">{item.matches}</td>
+              <td className="py-4 px-5">{item.search_status} Status</td>
+              <td className="py-4 px-5">Delete keyword</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </Content>
   );
 }
 
