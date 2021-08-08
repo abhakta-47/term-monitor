@@ -3,55 +3,22 @@ import { MdDelete, MdSearch } from "react-icons/md";
 
 import Content from "./Content";
 
-let getData = () => [
-  {
-    id: 1,
-    keyword: "Blockchain",
-    goal: "technology",
-    matches: 18,
-    search_status: "Done",
-  },
-  {
-    id: 2,
-    keyword: "ReactJs",
-    goal: "technology",
-    matches: 18,
-    search_status: "Done",
-  },
-  {
-    id: 3,
-    keyword: "NextJs",
-    goal: "technology",
-    matches: 18,
-    search_status: "Done",
-  },
-  {
-    id: 4,
-    keyword: "Typescript",
-    goal: "technology",
-    matches: 18,
-    search_status: "Done",
-  },
-  {
-    id: 5,
-    keyword: "Javascript",
-    goal: "technology",
-    matches: 18,
-    search_status: "Done",
-  },
-  {
-    id: 6,
-    keyword: "Django",
-    goal: "technology",
-    matches: 18,
-    search_status: "Done",
-  },
-];
-
 const tdHeadStyle = "py-4 px-5 text-center";
 const tdStyle = "py-4 px-5 text-center";
 
-function TrackingTable() {
+interface tableDataItem {
+  id: number;
+  keyword: string;
+  goal: string;
+  matches: number;
+  search_status: string;
+  [key: string]: any;
+}
+interface TrackingTableProps {
+  tableData: tableDataItem[];
+}
+
+function TrackingTable({ tableData }: TrackingTableProps) {
   return (
     <Content
       compClassName="tracking-table"
@@ -70,7 +37,7 @@ function TrackingTable() {
           </tr>
         </thead>
         <tbody className="font-roboto text-black-700 text-sm">
-          {getData().map((item) => (
+          {tableData.map((item) => (
             <tr
               key={item.id}
               className="border-t border-grey-200 hover:bg-black-100"
