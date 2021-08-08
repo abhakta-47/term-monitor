@@ -6,7 +6,7 @@ import SideBarMenuItem from "./SideBarMenuItem";
 interface SideBarDataItem {
   title: string;
   path: string;
-  icon: JSX.Element;
+  icon?: JSX.Element;
   cName?: string;
   subMenu?: SideBarDataItem[];
 }

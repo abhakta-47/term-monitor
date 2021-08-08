@@ -20,7 +20,7 @@ function Header() {
             />
           </div>
           <div className="text-2xl font-normal">
-            Term<span className="font-semibold">Monitor</span>
+            Term<span className="font-medium">Monitor</span>
           </div>
         </div>
       </Link>
@@ -34,10 +34,11 @@ function Header() {
             className="mx-1 px-2 focus:ring-2 focus:ring-pink-800"
           />
           <button className="h-full pl-4 pr-2 rounded-r-lg flex items-center bg-white text-primary text-xs hover:text-white hover:bg-primary">
-            SUBMIT <BsArrowRight fontFamily="bold" fontSize="1rem" />
+            SUBMIT{" "}
+            <BsArrowRight className="ml-2" fontFamily="bold" fontSize="1rem" />
           </button>
         </div>
-        <div className="h-8 w-8 rounded-full bg-white text-primary flex items-center justify-center">
+        <div className="h-10 w-10 rounded-full bg-white text-primary flex items-center justify-center">
           A
         </div>
       </div>

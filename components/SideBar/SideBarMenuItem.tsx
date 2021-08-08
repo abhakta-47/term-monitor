@@ -7,13 +7,16 @@ import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 
 import SideBarMenu from "./SideBarMenu";
 
-const SideBarMenuItemStyleBase = "flex p-4 cursor-pointer items-center";
+const SideBarMenuItemStyleBase =
+  "flex p-4 text-sm font-gray-400 cursor-pointer items-center";
+const SideBarMenuStyleBase =
+  "flex p-4 text-base font-gray-600 cursor-pointer items-center";
 const SideBarMenuItemExpand = "ml-auto";
 
 interface SideBarDataItem {
   title: string;
   path: string;
-  icon: JSX.Element;
+  icon?: JSX.Element;
   cName?: string;
   subMenu?: SideBarDataItem[];
 }
@@ -39,26 +42,17 @@ function SideBarMenuItem({ index, item, path }: SideBarMenuItemProp) {
             router.pathname === item.path
               ? "text-white bg-primary text-white"
               : "text-gray-800 hover:text-black"
-          } ${SideBarMenuItemStyleBase} `}
+          } ${SideBarMenuStyleBase} `}
           onClick={handleClick}
         >
-          <div className="mr-4">{item.icon}</div>
+          <div className="mr-8">{item.icon}</div>
           <span>{item.title}</span>
-          {/* <span>{path}</span> */}
-          {item.subMenu ? (
-            <span className={SideBarMenuItemExpand}>
-              {isOpen ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}
-            </span>
-          ) : (
-            ""
-          )}
+          <span className={SideBarMenuItemExpand}>
+            {!isOpen ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}
+          </span>
         </div>
-        <div className={`${isOpen ? "" : "hidden"}  ml-2`}>
-          {item.subMenu ? (
-            <SideBarMenu sideMenuItems={item.subMenu} path={path} />
-          ) : (
-            ""
-          )}
+        <div className={`${isOpen ? "" : "hidden"}  ml-6`}>
+          <SideBarMenu sideMenuItems={item.subMenu} path={path} />
         </div>
       </li>
     );
@@ -80,7 +74,7 @@ function SideBarMenuItem({ index, item, path }: SideBarMenuItemProp) {
           } ${SideBarMenuItemStyleBase} `}
           onClick={handleClick}
         >
-          {item.icon ? <div className="mr-4">{item.icon}</div> : ""}
+          {item.icon ? <div className="mr-8">{item.icon}</div> : ""}
           <span>{item.title}</span>
           {/* <span>{path}</span> */}
           {item.subMenu ? (

@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import Filter from "../components/Filter";
 import TrackingTable from "../components/TrackingTable";
+import { buttonPrimary } from "../styles/componentStyles";
 
 export default function Home() {
   return (
@@ -8,9 +9,7 @@ export default function Home() {
       <Filter />
       <TrackingTable />
       <div className="flex justify-center">
-        <div className="px-4 py-3 text-xl rounded-lg bg-primary text-white">
-          VIEW RESULTS
-        </div>
+        <button className={`${buttonPrimary}`}>VIEW RESULTS</button>
       </div>
     </Layout>
   );

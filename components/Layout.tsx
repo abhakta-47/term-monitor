@@ -17,8 +17,14 @@ function Layout({ children }: LyoutProps) {
           content="Web site created using create-react-app"
         />
         <link rel="icon" href="/favicon.ico" />
+        {/* fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+          rel="stylesheet"
+        />
       </Head>
-      <div className="flex flex-col h-screen">
+      <div className="flex flex-col h-screen font-poppins">
         <Header />
         <div className="flex flex-grow bg-backGround">
           <Sidebar />

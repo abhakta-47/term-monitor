@@ -1,17 +1,23 @@
 import React from "react";
 import { BiSearchAlt2 } from "react-icons/bi";
 import Content from "./Content";
-
+import { buttonPrimary } from "../styles/componentStyles";
 function Filter() {
   return (
     <Content
       compClassName="filter"
       mainHeader={[
         "Add another keyword",
-        <span key="1" className="mx-4 px-4 py-1 bg-primary text-white">
+        <span
+          key="1"
+          className="mx-4 px-4 py-1 bg-primary text-white text-sm font-roboto font-medium items-center"
+        >
           1/3
         </span>,
-        <span key="2" className="text-base">
+        <span
+          key="2"
+          className="text-sm font-roboto font-medium cursor-pointer"
+        >
           UPGRADE
         </span>,
       ]}
@@ -30,9 +36,7 @@ function Filter() {
             className="ml-2 px-2 focus:ring-2 focus:ring-pink-800"
           />
         </label>
-        <button className="ml-auto px-4 py-3 text-xl rounded-lg bg-primary text-white">
-          SAVE FILTERS
-        </button>
+        <button className={`${buttonPrimary} ml-auto`}>SAVE FILTERS</button>
       </div>
     </Content>
   );

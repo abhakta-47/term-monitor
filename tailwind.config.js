@@ -13,6 +13,13 @@ module.exports = {
         black: "#000000",
         blackLighter: "#757575",
       },
+      fontFamily: {
+        poppins: ["Poppins"],
+        roboto: ["Roboto"],
+      },
+      boxShadow: {
+        primary: "0 0 1.5rem rgba(63, 14, 64, 0.75)",
+      },
     },
   },
   variants: {

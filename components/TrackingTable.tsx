@@ -1,7 +1,7 @@
 import React from "react";
+import { BiSearchAlt2 } from "react-icons/bi";
 
 import Content from "./Content";
-import styles from "../styles/TrackingTable.module.css";
 
 let getData = () => [
   {
@@ -48,8 +48,10 @@ let getData = () => [
   },
 ];
 
+const tdHeadStyle = "py-4 px-5 text-center";
+const tdStyle = "py-4 px-5 text-center";
+
 function TrackingTable() {
-  // let []
   return (
     <Content
       compClassName="tracking-table"
@@ -58,22 +60,38 @@ function TrackingTable() {
     >
       <table className="w-full">
         <thead>
-          <tr>
-            <td className="py-4 px-5">Keywords</td>
-            <td className="py-4 px-5">Goal</td>
-            <td className="py-4 px-5">Matches</td>
-            <td className="py-4 px-5">Search Status</td>
-            <td className="py-4 px-5">Delete keyword</td>
+          <tr className="font-semibold text-gray-700 text-sm">
+            <td className={`py-4 px-5`}>Keywords</td>
+            <td></td>
+            <td className={`${tdHeadStyle}`}>Goal</td>
+            <td className={`${tdHeadStyle}`}>Matches</td>
+            <td className={`${tdHeadStyle}`}>Search Status</td>
+            <td className={`${tdHeadStyle}`}>Delete keyword</td>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="font-roboto text-gray-700 text-sm">
           {getData().map((item) => (
-            <tr key={item.id}>
+            <tr
+              key={item.id}
+              className="border-t border-grey-200 hover:bg-gray-100"
+            >
               <td className="py-4 px-5">{item.keyword}</td>
-              <td className="py-4 px-5">{item.goal}</td>
-              <td className="py-4 px-5">{item.matches}</td>
-              <td className="py-4 px-5">{item.search_status} Status</td>
-              <td className="py-4 px-5">Delete keyword</td>
+              <td className="px-16 text-gray-800">
+                <BiSearchAlt2 />
+              </td>
+              <td className={`${tdStyle}`}>
+                {item.goal
+                  .split(" ")
+                  .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+                  .join(" ")}
+              </td>
+              <td className={`${tdStyle}`}>{item.matches}</td>
+              <td className={`${tdStyle}`}>{item.search_status}</td>
+              <td className={``}>
+                <div className="flex justify-center">
+                  <div className="h-5 w-5 rounded-full bg-gray-400"></div>
+                </div>
+              </td>
             </tr>
           ))}
         </tbody>
