@@ -18,37 +18,37 @@ export const SidebarData: SideBarDataItem[] = [
   {
     title: "Add keywords",
     path: "/",
-    icon: <AiFillHome />,
+    icon: <AiFillHome fontSize="1.5rem" />,
     cName: "nav-text",
   },
   {
     title: "Matches",
     path: "/matches",
-    icon: <IoMdPeople />,
+    icon: <IoMdPeople fontSize="1.5rem" />,
     cName: "nav-text",
   },
   {
     title: "Manage sources",
     path: "/manage",
-    icon: <AiOutlineCreditCard />,
+    icon: <AiOutlineCreditCard fontSize="1.5rem" />,
     cName: "nav-text",
   },
   {
     title: "Integration",
     path: "/integration",
-    icon: <AiOutlineCreditCard />,
+    icon: <AiOutlineCreditCard fontSize="1.5rem" />,
     cName: "nav-text",
   },
   {
     title: "Alerts",
     path: "/alerts",
-    icon: <AiOutlineCreditCard />,
+    icon: <AiOutlineCreditCard fontSize="1.5rem" />,
     cName: "nav-text",
   },
   {
     title: "Settings",
     path: "/settings",
-    icon: <AiTwotoneSetting />,
+    icon: <AiTwotoneSetting fontSize="1.5rem" />,
     cName: "nav-text",
     subMenu: [
       {

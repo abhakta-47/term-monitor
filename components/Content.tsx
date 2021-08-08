@@ -23,7 +23,8 @@ function Content({
           ""
         )}
       </div>
-      <div className="bg-white px-5 py-5">{children}</div>
+      {children}
+      {/* <div className="bg-white px-5 py-5">{children}</div> */}
     </div>
   );
 }

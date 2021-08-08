@@ -58,9 +58,9 @@ function TrackingTable() {
       mainHeader="The terms you are tracking"
       subHeader="The data will refresh every 5 min"
     >
-      <table className="w-full">
+      <table className="w-full bg-white px-5 py-5 shadow">
         <thead>
-          <tr className="font-semibold text-gray-700 text-sm">
+          <tr className="font-semibold text-black-700 text-sm">
             <td className={`py-4 px-5`}>Keywords</td>
             <td></td>
             <td className={`${tdHeadStyle}`}>Goal</td>
@@ -69,14 +69,14 @@ function TrackingTable() {
             <td className={`${tdHeadStyle}`}>Delete keyword</td>
           </tr>
         </thead>
-        <tbody className="font-roboto text-gray-700 text-sm">
+        <tbody className="font-roboto text-black-700 text-sm">
           {getData().map((item) => (
             <tr
               key={item.id}
-              className="border-t border-grey-200 hover:bg-gray-100"
+              className="border-t border-grey-200 hover:bg-black-100"
             >
               <td className="py-4 px-5">{item.keyword}</td>
-              <td className="px-16 text-gray-800">
+              <td className="px-16 text-black-800">
                 <MdSearch fontSize="1.5rem" />
               </td>
               <td className={`${tdStyle}`}>

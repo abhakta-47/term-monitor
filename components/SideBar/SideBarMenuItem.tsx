@@ -8,9 +8,9 @@ import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import SideBarMenu from "./SideBarMenu";
 
 const SideBarMenuItemStyleBase =
-  "flex p-4 text-sm font-gray-400 cursor-pointer items-center";
+  "flex p-4 text-sm font-black-400 cursor-pointer items-center";
 const SideBarMenuStyleBase =
-  "flex p-4 text-base font-gray-600 cursor-pointer items-center";
+  "flex p-4 text-base font-black-600 cursor-pointer items-center";
 const SideBarMenuItemExpand = "ml-auto";
 
 interface SideBarDataItem {
@@ -41,7 +41,7 @@ function SideBarMenuItem({ index, item, path }: SideBarMenuItemProp) {
           className={`${
             router.pathname === item.path
               ? "text-white bg-primary text-white"
-              : "text-gray-800 hover:text-black"
+              : "text-black-800 hover:text-black"
           } ${SideBarMenuStyleBase} `}
           onClick={handleClick}
         >
@@ -70,7 +70,7 @@ function SideBarMenuItem({ index, item, path }: SideBarMenuItemProp) {
           className={`${
             router.pathname === item.path
               ? "text-white bg-primary text-white"
-              : "text-gray-600 hover:text-black"
+              : "text-black-600 hover:text-black"
           } ${SideBarMenuItemStyleBase} `}
           onClick={handleClick}
         >

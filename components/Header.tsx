@@ -8,7 +8,7 @@ function Header() {
   return (
     <div
       style={{ minHeight: "5rem" }}
-      className="h-20 flex bg-primary items-center"
+      className="h-20 flex bg-primary items-center shadow-md"
     >
       <Link href="#" passHref>
         <div className="flex cursor-pointer items-center justify-center h-full w-60 bg-white">

@@ -21,10 +21,10 @@ function Filter() {
           UPGRADE
         </span>,
       ]}
-      subHeader="advanced search"
+      subHeader="Advance search"
     >
       <div
-        className={`flex items-center bg-white text-gray-500 focus-within:text-gray-900`}
+        className={`flex bg-white px-5 py-5 items-center bg-white text-black-700 focus-within:text-black-900`}
       >
         <label className="mr-8 flex">
           <BiSearchAlt2 size="1.5rem" />
