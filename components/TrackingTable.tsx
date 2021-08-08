@@ -1,5 +1,5 @@
 import React from "react";
-import { BiSearchAlt2 } from "react-icons/bi";
+import { MdDelete, MdSearch } from "react-icons/md";
 
 import Content from "./Content";
 
@@ -77,7 +77,7 @@ function TrackingTable() {
             >
               <td className="py-4 px-5">{item.keyword}</td>
               <td className="px-16 text-gray-800">
-                <BiSearchAlt2 />
+                <MdSearch fontSize="1.5rem" />
               </td>
               <td className={`${tdStyle}`}>
                 {item.goal
@@ -89,7 +89,7 @@ function TrackingTable() {
               <td className={`${tdStyle}`}>{item.search_status}</td>
               <td className={``}>
                 <div className="flex justify-center">
-                  <div className="h-5 w-5 rounded-full bg-gray-400"></div>
+                  <MdDelete fontSize="1.5rem" />
                 </div>
               </td>
             </tr>
