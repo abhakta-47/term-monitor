@@ -16,6 +16,7 @@ function Home({ tableData }) {
 }
 
 export async function getStaticProps() {
+  // localStorage
   const rawData = await fetch(
     "https://raw.githubusercontent.com/akshita151199/Termmonitor-APIs/main/dashboard"
   );
